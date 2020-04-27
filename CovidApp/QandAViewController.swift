@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  QandAViewController.swift
 //  CovidApp
 //
 //  Created by Shane Lawson on 4/27/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class QandAViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()

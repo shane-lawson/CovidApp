@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  QuizViewController.swift
 //  CovidApp
 //
 //  Created by Shane Lawson on 4/27/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class QuizViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
