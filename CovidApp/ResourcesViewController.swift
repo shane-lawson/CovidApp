@@ -7,24 +7,55 @@
 //
 
 import UIKit
+import SafariServices
 
-class ResourcesViewController: UIViewController {
+class ResourcesViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+   var tableSectionHeaders: [String]!
+   var tableSectionCells: [[TableCellData]]!
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-    
+      let path = Bundle.main.path(forResource: "Resources", ofType: "plist")!
+      let data = FileManager.default.contents(atPath: path)!
+      let resources = try! PropertyListDecoder().decode([String:[TableCellData]].self, from: data)
+      tableSectionHeaders = resources.keys.map { $0 }
+      tableSectionCells = resources.values.map { $0 }
+   }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   // MARK: - UITableViewDataSource
+   
+   override func numberOfSections(in tableView: UITableView) -> Int {
+      return tableSectionHeaders.count
+   }
+   
+   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return tableSectionCells[section].count
+   }
+   
+   override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+      return tableSectionHeaders[section]
+   }
+   
+   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let tableCellData: TableCellData = tableSectionCells[indexPath.section][indexPath.row]
+      let cell = tableView.dequeueReusableCell(withIdentifier: "resourceCell")!
+      cell.textLabel?.text = tableCellData.title
+      cell.detailTextLabel?.text = URL(string: tableCellData.url)?.host
+      cell.detailTextLabel?.textColor = .systemGray
+      return cell
+   }
+   
+   // MARK: - UITableViewDelegate
+   
+   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      let tableCellData: TableCellData = tableSectionCells[indexPath.section][indexPath.row]
+      let url = URL(string: tableCellData.url)!
+      let safariVC = SFSafariViewController(url: url)
+      safariVC.dismissButtonStyle = .close
+      present(safariVC, animated: true, completion: { [unowned self] in
+         self.tableView.deselectRow(at: indexPath, animated: true)
+      })
+   }
 }
