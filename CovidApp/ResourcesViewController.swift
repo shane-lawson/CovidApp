@@ -11,35 +11,39 @@ import SafariServices
 
 class ResourcesViewController: UITableViewController {
 
-   var tableSectionHeaders: [String]!
-   var tableSectionCells: [[TableCellData]]!
+   var tableSections: [TableSection]!
    
    override func viewDidLoad() {
       super.viewDidLoad()
 
       let path = Bundle.main.path(forResource: "Resources", ofType: "plist")!
       let data = FileManager.default.contents(atPath: path)!
-      let resources = try! PropertyListDecoder().decode([String:[TableCellData]].self, from: data)
-      tableSectionHeaders = resources.keys.map { $0 }
-      tableSectionCells = resources.values.map { $0 }
+      tableSections = try! PropertyListDecoder().decode([TableSection].self, from: data)
+   }
+   
+   override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      if tableView.contentSize.height < view.frame.height {
+         tableView.bounces = false
+      }
    }
 
    // MARK: - UITableViewDataSource
    
    override func numberOfSections(in tableView: UITableView) -> Int {
-      return tableSectionHeaders.count
+      return tableSections.count
    }
    
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return tableSectionCells[section].count
+      return tableSections[section].items.count
    }
    
    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-      return tableSectionHeaders[section]
+      return tableSections[section].title
    }
    
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let tableCellData: TableCellData = tableSectionCells[indexPath.section][indexPath.row]
+      let tableCellData = tableSections[indexPath.section].items[indexPath.row]
       let cell = tableView.dequeueReusableCell(withIdentifier: "resourceCell")!
       cell.textLabel?.text = tableCellData.title
       cell.detailTextLabel?.text = URL(string: tableCellData.url)?.host
@@ -50,7 +54,7 @@ class ResourcesViewController: UITableViewController {
    // MARK: - UITableViewDelegate
    
    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let tableCellData: TableCellData = tableSectionCells[indexPath.section][indexPath.row]
+      let tableCellData = tableSections[indexPath.section].items[indexPath.row]
       let url = URL(string: tableCellData.url)!
       let safariVC = SFSafariViewController(url: url)
       safariVC.dismissButtonStyle = .close

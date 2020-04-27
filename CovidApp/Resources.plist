@@ -1,57 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>Information</key>
-	<array>
-		<dict>
-			<key>Title</key>
-			<string>CDC Guidance and Updates</string>
-			<key>URL</key>
-			<string>https://www.cdc.gov/coronavirus/2019-ncov/index.html</string>
-		</dict>
-		<dict>
-			<key>Title</key>
-			<string>Track COVID-19</string>
-			<key>URL</key>
-			<string>https://coronavirus.jhu.edu/map.html</string>
-		</dict>
-		<dict>
-			<key>Title</key>
-			<string>Washoe County COVID-19 Information</string>
-			<key>URL</key>
-			<string>https://www.washoecounty.us/health/programs-and-services/communicable-diseases-and-epidemiology/educational_materials/COVID-19.php/</string>
-		</dict>
-	</array>
-	<key>DIY</key>
-	<array>
-		<dict>
-			<key>Title</key>
-			<string>DIY Mask</string>
-			<key>URL</key>
-			<string>https://youtu.be/S9RWII2-5_4</string>
-		</dict>
-		<dict>
-			<key>Title</key>
-			<string>DIY Disinfectant</string>
-			<key>URL</key>
-			<string>https://www.youtube.com/watch?v=KYaINTXxQdw</string>
-		</dict>
-	</array>
-	<key>Things to do</key>
-	<array>
-		<dict>
-			<key>Title</key>
-			<string>At Home</string>
-			<key>URL</key>
-			<string>https://www.housebeautiful.com/lifestyle/fun-at-home/a31697979/fun-things-to-do-at-home/</string>
-		</dict>
-		<dict>
-			<key>Title</key>
-			<string>Dating</string>
-			<key>URL</key>
-			<string>https://www.flare.com/sex-and-relationships/dating-during-coronavirus-covid-19-stories/k</string>
-		</dict>
-	</array>
-</dict>
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Information</string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>Title</key>
+				<string>CDC Guidance and Updates</string>
+				<key>URL</key>
+				<string>https://www.cdc.gov/coronavirus/2019-ncov/index.html</string>
+			</dict>
+			<dict>
+				<key>Title</key>
+				<string>Track COVID-19</string>
+				<key>URL</key>
+				<string>https://coronavirus.jhu.edu/map.html</string>
+			</dict>
+			<dict>
+				<key>Title</key>
+				<string>Washoe County COVID-19 Information</string>
+				<key>URL</key>
+				<string>https://www.washoecounty.us/health/programs-and-services/communicable-diseases-and-epidemiology/educational_materials/COVID-19.php/</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>DIY</string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>Title</key>
+				<string>DIY Mask</string>
+				<key>URL</key>
+				<string>https://youtu.be/S9RWII2-5_4</string>
+			</dict>
+			<dict>
+				<key>Title</key>
+				<string>DIY Disinfectant</string>
+				<key>URL</key>
+				<string>https://www.youtube.com/watch?v=KYaINTXxQdw</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Things to do</string>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>Title</key>
+				<string>At Home</string>
+				<key>URL</key>
+				<string>https://www.housebeautiful.com/lifestyle/fun-at-home/a31697979/fun-things-to-do-at-home/</string>
+			</dict>
+			<dict>
+				<key>Title</key>
+				<string>Dating</string>
+				<key>URL</key>
+				<string>https://www.flare.com/sex-and-relationships/dating-during-coronavirus-covid-19-stories/k</string>
+			</dict>
+		</array>
+	</dict>
+</array>
 </plist>

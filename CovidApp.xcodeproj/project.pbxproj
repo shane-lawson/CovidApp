@@ -17,6 +17,7 @@
 		3435EBF02457701300462A8D /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435EBEF2457701300462A8D /* ResourcesViewController.swift */; };
 		3435EBF22457717400462A8D /* Resources.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3435EBF12457717400462A8D /* Resources.plist */; };
 		3435EBF8245774FD00462A8D /* TableCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435EBF7245774FD00462A8D /* TableCellData.swift */; };
+		3435EBFE245791C100462A8D /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435EBFD245791C100462A8D /* TableSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3435EBEF2457701300462A8D /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
 		3435EBF12457717400462A8D /* Resources.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources.plist; sourceTree = "<group>"; };
 		3435EBF7245774FD00462A8D /* TableCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellData.swift; sourceTree = "<group>"; };
+		3435EBFD245791C100462A8D /* TableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				3435EBEF2457701300462A8D /* ResourcesViewController.swift */,
 				342C139124576B5800EFB051 /* Main.storyboard */,
 				3435EBF12457717400462A8D /* Resources.plist */,
+				3435EBFD245791C100462A8D /* TableSection.swift */,
 				342C139424576B5C00EFB051 /* Assets.xcassets */,
 				342C139624576B5C00EFB051 /* LaunchScreen.storyboard */,
 				342C139924576B5C00EFB051 /* Info.plist */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3435EBFE245791C100462A8D /* TableSection.swift in Sources */,
 				3435EBF02457701300462A8D /* ResourcesViewController.swift in Sources */,
 				342C139024576B5800EFB051 /* QandAViewController.swift in Sources */,
 				3435EBF8245774FD00462A8D /* TableCellData.swift in Sources */,
