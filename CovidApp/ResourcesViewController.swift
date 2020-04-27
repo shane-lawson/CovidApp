@@ -21,13 +21,6 @@ class ResourcesViewController: UITableViewController {
       tableSections = try! PropertyListDecoder().decode([TableSection].self, from: data)
    }
    
-   override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(animated)
-      if tableView.contentSize.height < view.frame.height {
-         tableView.bounces = false
-      }
-   }
-
    // MARK: - UITableViewDataSource
    
    override func numberOfSections(in tableView: UITableView) -> Int {

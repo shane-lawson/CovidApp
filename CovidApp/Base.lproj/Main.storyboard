@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quiz-->
+        <!--Quiz View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="Quiz" id="9pv-A4-QxB" customClass="QuizViewController" customModule="CovidApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="QuizViewController" customModule="CovidApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,6 +185,7 @@
             <point key="canvasLocation" x="-955" y="749"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.01231079362" green="0.20195955039999999" blue="0.39946699140000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="checkmark.seal" catalog="system" width="128" height="122"/>
         <image name="link" catalog="system" width="128" height="116"/>
