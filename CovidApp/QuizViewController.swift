@@ -10,14 +10,14 @@ import UIKit
 
 class QuizViewController: UITableViewController {
    
-   var tableSections: [ResourcesTableSection]!
+   var tableSections: [QuizTableSection]!
    
    override func viewDidLoad() {
       super.viewDidLoad()
       
       let path = Bundle.main.path(forResource: "Quiz", ofType: "plist")!
       let data = FileManager.default.contents(atPath: path)!
-//      tableSections = try! PropertyListDecoder().decode([TableSection].self, from: data)
+      tableSections = try! PropertyListDecoder().decode([QuizTableSection].self, from: data)
    }
    
    // MARK: - UITableViewDataSource

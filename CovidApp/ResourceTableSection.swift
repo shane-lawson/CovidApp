@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct ResourceTableSection: Codable {
+struct ResourcesTableSection: Codable {
    let title: String
-   let items: [TableCellData]
+   let items: [ResourcesTableCellData]
    
    enum CodingKeys: String, CodingKey {
       case title = "Title"
