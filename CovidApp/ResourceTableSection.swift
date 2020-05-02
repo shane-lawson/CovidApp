@@ -1,5 +1,5 @@
 //
-//  TableCellData.swift
+//  ResourcesTableSection.swift
 //  CovidApp
 //
 //  Created by Shane Lawson on 4/27/20.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct TableCellData: Codable {
+struct ResourceTableSection: Codable {
    let title: String
-   let url: String
+   let items: [TableCellData]
    
    enum CodingKeys: String, CodingKey {
       case title = "Title"
-      case url = "URL"
+      case items
    }
 }

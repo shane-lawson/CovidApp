@@ -11,14 +11,14 @@ import SafariServices
 
 class ResourcesViewController: UITableViewController {
 
-   var tableSections: [TableSection]!
+   var tableSections: [ResourcesTableSection]!
    
    override func viewDidLoad() {
       super.viewDidLoad()
 
       let path = Bundle.main.path(forResource: "Resources", ofType: "plist")!
       let data = FileManager.default.contents(atPath: path)!
-      tableSections = try! PropertyListDecoder().decode([TableSection].self, from: data)
+      tableSections = try! PropertyListDecoder().decode([ResourcesTableSection].self, from: data)
    }
    
    // MARK: - UITableViewDataSource

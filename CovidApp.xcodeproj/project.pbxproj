@@ -15,9 +15,11 @@
 		342C139524576B5C00EFB051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342C139424576B5C00EFB051 /* Assets.xcassets */; };
 		342C139824576B5C00EFB051 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342C139624576B5C00EFB051 /* LaunchScreen.storyboard */; };
 		3435EBF02457701300462A8D /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435EBEF2457701300462A8D /* ResourcesViewController.swift */; };
-		3435EBF22457717400462A8D /* Resources.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3435EBF12457717400462A8D /* Resources.plist */; };
-		3435EBF8245774FD00462A8D /* TableCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435EBF7245774FD00462A8D /* TableCellData.swift */; };
-		3435EBFE245791C100462A8D /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435EBFD245791C100462A8D /* TableSection.swift */; };
+		3435EBF8245774FD00462A8D /* ResourcesTableCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435EBF7245774FD00462A8D /* ResourcesTableCellData.swift */; };
+		3435EBFE245791C100462A8D /* ResourceTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435EBFD245791C100462A8D /* ResourceTableSection.swift */; };
+		34F6F61F245D20B8004C3E5E /* Resources.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34F6F61E245D20B8004C3E5E /* Resources.plist */; };
+		34F6F622245D20F2004C3E5E /* Quiz.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34F6F621245D20F2004C3E5E /* Quiz.plist */; };
+		34F6F624245D216D004C3E5E /* QuizTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F6F623245D216D004C3E5E /* QuizTableSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +33,11 @@
 		342C139724576B5C00EFB051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		342C139924576B5C00EFB051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3435EBEF2457701300462A8D /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
-		3435EBF12457717400462A8D /* Resources.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources.plist; sourceTree = "<group>"; };
-		3435EBF7245774FD00462A8D /* TableCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellData.swift; sourceTree = "<group>"; };
-		3435EBFD245791C100462A8D /* TableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		3435EBF7245774FD00462A8D /* ResourcesTableCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesTableCellData.swift; sourceTree = "<group>"; };
+		3435EBFD245791C100462A8D /* ResourceTableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTableSection.swift; sourceTree = "<group>"; };
+		34F6F61E245D20B8004C3E5E /* Resources.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Resources.plist; sourceTree = "<group>"; };
+		34F6F621245D20F2004C3E5E /* Quiz.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Quiz.plist; sourceTree = "<group>"; };
+		34F6F623245D216D004C3E5E /* QuizTableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +70,30 @@
 		342C138824576B5800EFB051 /* CovidApp */ = {
 			isa = PBXGroup;
 			children = (
-				3435EBF7245774FD00462A8D /* TableCellData.swift */,
+				3435EBF7245774FD00462A8D /* ResourcesTableCellData.swift */,
 				342C138924576B5800EFB051 /* AppDelegate.swift */,
 				342C138B24576B5800EFB051 /* SceneDelegate.swift */,
 				342C138D24576B5800EFB051 /* QuizViewController.swift */,
 				342C138F24576B5800EFB051 /* QandAViewController.swift */,
 				3435EBEF2457701300462A8D /* ResourcesViewController.swift */,
 				342C139124576B5800EFB051 /* Main.storyboard */,
-				3435EBF12457717400462A8D /* Resources.plist */,
-				3435EBFD245791C100462A8D /* TableSection.swift */,
+				3435EBFD245791C100462A8D /* ResourceTableSection.swift */,
+				34F6F623245D216D004C3E5E /* QuizTableSection.swift */,
+				34F6F620245D20C7004C3E5E /* Data symlinks */,
 				342C139424576B5C00EFB051 /* Assets.xcassets */,
 				342C139624576B5C00EFB051 /* LaunchScreen.storyboard */,
 				342C139924576B5C00EFB051 /* Info.plist */,
 			);
 			path = CovidApp;
+			sourceTree = "<group>";
+		};
+		34F6F620245D20C7004C3E5E /* Data symlinks */ = {
+			isa = PBXGroup;
+			children = (
+				34F6F621245D20F2004C3E5E /* Quiz.plist */,
+				34F6F61E245D20B8004C3E5E /* Resources.plist */,
+			);
+			name = "Data symlinks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +154,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34F6F61F245D20B8004C3E5E /* Resources.plist in Resources */,
+				34F6F622245D20F2004C3E5E /* Quiz.plist in Resources */,
 				342C139824576B5C00EFB051 /* LaunchScreen.storyboard in Resources */,
 				342C139524576B5C00EFB051 /* Assets.xcassets in Resources */,
-				3435EBF22457717400462A8D /* Resources.plist in Resources */,
 				342C139324576B5800EFB051 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,13 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3435EBFE245791C100462A8D /* TableSection.swift in Sources */,
+				3435EBFE245791C100462A8D /* ResourceTableSection.swift in Sources */,
 				3435EBF02457701300462A8D /* ResourcesViewController.swift in Sources */,
 				342C139024576B5800EFB051 /* QandAViewController.swift in Sources */,
-				3435EBF8245774FD00462A8D /* TableCellData.swift in Sources */,
+				3435EBF8245774FD00462A8D /* ResourcesTableCellData.swift in Sources */,
 				342C138E24576B5800EFB051 /* QuizViewController.swift in Sources */,
 				342C138A24576B5800EFB051 /* AppDelegate.swift in Sources */,
 				342C138C24576B5800EFB051 /* SceneDelegate.swift in Sources */,
+				34F6F624245D216D004C3E5E /* QuizTableSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
